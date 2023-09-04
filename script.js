@@ -1,4 +1,4 @@
-$(".wrapper").hide();
+//$(".wrapper").hide();
 const weatherCardsDiv = document.querySelector(".cards");
 // function getReady(){
 //     $.ajax({
