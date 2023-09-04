@@ -1,34 +1,34 @@
-//$(".wrapper").hide();
+$(".wrapper").hide();
 const weatherCardsDiv = document.querySelector(".cards");
-// function getReady(){
-//     $.ajax({
-//         url: "https://api.ipify.org?format=json",
-//         dataType: "json",
-//         success: function (data) {
-//             console.log(data);
-//             alert("This website is trying to access your IP Address");
-//             getLatLongFromAPI(data.ip);
-//         },
-//         error: {
+function getReady(){
+    $.ajax({
+        url: "https://api.ipify.org?format=json",
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+            alert("This website is trying to access your IP Address");
+            getLatLongFromAPI(data.ip);
+        },
+        error: {
     
-//         }
-//       })
+        }
+      })
     
-// }
+}
 
-//   function getLatLongFromAPI (ip) {
-//     $.ajax({
-//         url:  `http://api.ipstack.com/${ip}?access_key=077d8e43b7fca3f7e71fe17ab0a0d8c3`,
-//         //dataType: JSON,
-//         success: function (data){
-//             console.log(((data)));
-//             getWeather(((data.latitude)), ((data.longitude)), data.city,data.country_name );
-//         },
+  function getLatLongFromAPI (ip) {
+    $.ajax({
+        url:  `http://api.ipstack.com/${ip}?access_key=077d8e43b7fca3f7e71fe17ab0a0d8c3`,
+        //dataType: JSON,
+        success: function (data){
+            console.log(((data)));
+            getWeather(((data.latitude)), ((data.longitude)), data.city,data.country_name );
+        },
         
-//     });
+    });
 
     
-//   }
+  }
 
   
 
